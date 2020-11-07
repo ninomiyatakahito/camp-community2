@@ -1,0 +1,18 @@
+.contener-main{
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-lists{
+  padding: 12px;
+  width: 30%;
+  background: rgba(203, 255, 252, 0.353);
+}
+
+
+
+.past-log{
+  /* text-align:center;*/
+  margin: 50px 45px;
+  padding: 10px;
+}
