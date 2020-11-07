@@ -1,11 +1,12 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<header>
+<%= link_to image_tag("logo.png", class: :logo), root_path %>
+</header>
 
 
-<h2>gmap</h2>
-
+<div class="main">
+<div class="contener-main">
+<h2></h2>
+<div class="g-map">
 <input id="address" type="textbox" value="GeekSalon">
 <input type="button" value="Encode" onclick="codeAddress()">
 <!-- 下の1行を追加 -->
@@ -16,7 +17,7 @@
 <style>
 #map {
   height: 600px;
-  width: 600px;
+  width: 800px;
 }
 </style>
 
@@ -61,3 +62,25 @@ function codeAddress(){
 <script async defer
               src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
 </script>
+</div>
+
+<div class="event-lists">
+  <div class="event-title"> 
+  <h1>イベント一覧 </h1>
+  </div>
+    <div class="event">
+      <h3>イベント写真</h3>
+    </div>
+    <div class="event">
+    <h3>コンセプト</h3>
+    </div>
+    <div class="event">
+    <h3>企画者</h3>
+    </div>
+</div>
+</div>
+
+<div class="past-log">
+<h1>過去の開催模様</h1>
+</div>
+</main>
