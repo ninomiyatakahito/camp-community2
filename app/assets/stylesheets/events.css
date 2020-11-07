@@ -28,7 +28,8 @@ header{
 
 
 .past-log{
-  /* text-align:center;*/
-  margin: 50px 45px;
+  text-align:center;
+  margin-top: 80px;
   padding: 10px;
 }
+

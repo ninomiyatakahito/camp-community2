@@ -4,9 +4,6 @@ class Event < ApplicationRecord
 
   validates :concept, presence: true
   validates :place, presence: true
-  validates :concept, presence: true
+  validates :period, presence: true
   validates :image, presence: true
-
- 
-end
 end
