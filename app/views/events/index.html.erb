@@ -87,22 +87,21 @@ function codeAddress(){
 </script>
 </div>
 
-<div class="event-lists">
-  <div class="event-title"> 
-  <h1>イベント一覧 </h1>
-    <%= render partial: "event", collection: @events %>
-    
+  <div class="event-lists">
+    <h1>イベント一覧 </h1>
+    <div class="event-title"> 
+      <%= render partial: "event", collection: @events %>
+    </div>
+      <div class="event">
+        <h3>イベント写真</h3>
+      </div>
+      <div class="event">
+      <h3>コンセプト</h3>
+      </div>
+      <div class="event">
+      <h3>企画者</h3>
+      </div>
   </div>
-    <div class="event">
-      <h3>イベント写真</h3>
-    </div>
-    <div class="event">
-    <h3>コンセプト</h3>
-    </div>
-    <div class="event">
-    <h3>企画者</h3>
-    </div>
-</div>
 </div>
 
 <div class="past-log">

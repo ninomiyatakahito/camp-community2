@@ -22,7 +22,9 @@ header{
 .event-lists{
   padding: 12px;
   width: 30%;
+  height: 600px;
   background: rgba(203, 255, 252, 0.353);
+  overflow: scroll;
 }
 
 
