@@ -33,6 +33,7 @@
 | ---------------- | ---------- | -----------                  |
 | concept          | text       | null: false                  |
 | place            | text       | null: false                  |
+| period           | text       | null: false                  |
 | user             | references | null: false,foreign_key:true |
 
 ### Association
