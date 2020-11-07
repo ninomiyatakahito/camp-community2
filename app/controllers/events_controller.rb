@@ -29,12 +29,19 @@ class EventsController < ApplicationController
 
   def update
     if event = Event.find(params[:id])
-      event.update(prototype_params)
+      event.update(event_params)
       redirect_to event_path (event.id), method: :get
     else
       render 'edit'
     end
   end
+
+  def destroy
+    event = Event.find(params[:id])
+    event.destroy
+    redirect_to root_path
+  end
+
   private
 
   def event_params
