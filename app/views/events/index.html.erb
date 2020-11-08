@@ -21,10 +21,11 @@
       </ul>
     </div>
   </div>
-
 </header>
 
 
+
+<!--google-map-->
 <div class="main">
 <div class="contener-main">
 <h2></h2>
@@ -32,7 +33,6 @@
 
 <input id="address" type="textbox" value="GeekSalon">
 <input type="button" value="Encode" onclick="codeAddress()">
-<!-- 下の1行を追加 -->
 <div id="display"></div>
 
 <div id='map'></div>
@@ -47,7 +47,6 @@
 <script>
 let map
 let geocoder
-// 下の1行を追加 
 const display = document.getElementById('display')
 
 function initMap(){
@@ -74,7 +73,6 @@ function codeAddress(){
           map: map,
           position: results[0].geometry.location
       });
-      // 下の1行を追加 
       display.textContent = "検索結果：" + results[ 0 ].geometry.location
     } else {
       alert('該当する結果がありませんでした：' + status);
@@ -82,10 +80,10 @@ function codeAddress(){
   });   
 }
 </script>
-<script async defer
-              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap"></script>
 </div>
+<!--google-map-->
+
 
   <div class="event-lists">
     <h1>イベント一覧 </h1>
