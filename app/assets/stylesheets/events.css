@@ -25,6 +25,7 @@ header{
   height: 600px;
   background: rgba(203, 255, 252, 0.353);
   overflow: scroll;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .3);
 }
 
 
@@ -35,3 +36,26 @@ header{
   padding: 10px;
 }
 
+.genre-images{
+  display: flex;
+  justify-content: space-around;
+}
+
+.genre-image{
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+  border-radius: 40px;
+}
+
+.genre-image h2{
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.genre-item{
+  margin: 20px 100px;
+}
+
+.g-map{
+  height: 600px;
+  width: 600px;
+}

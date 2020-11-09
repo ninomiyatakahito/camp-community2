@@ -1,0 +1,10 @@
+.buy-item-img{
+  width: 50%;
+  height: 50%;
+  margin-left: 30px;
+}
+
+.transaction-contents{
+  display: flex;
+  justify-content: center;
+}
