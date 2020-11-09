@@ -11,10 +11,13 @@ event#show
           <%= link_to "編集する",  edit_event_path, class: :prototype__btn %>
           <%= link_to "削除する",  event_path, method: :delete, class: :prototype__btn %>
         </div>
+        <% elsif  %>
+        <%= link_to 'イベント参加ページに進む', event_orders_path(@event.id) ,class: :prototype__btn %>
       <% end %>
       <div class="prototype__image">
         <%= image_tag @event.image %>
       </div>
+
       <div class="prototype__body">
         <div class="prototype__detail">
           <p class="detail__title">キャッチコピー</p>
@@ -29,7 +32,6 @@ event#show
             <%= @event.period %>
           </p>
         </div>
-
       </div>
 
     </div>

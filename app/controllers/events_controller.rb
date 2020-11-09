@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+
+
   def index
     @events = Event.all
   end
@@ -47,5 +49,6 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:concept, :place, :period, :image).merge(user_id: current_user.id)
   end
+
 end
 
