@@ -54,3 +54,8 @@ header{
 .genre-item{
   margin: 20px 100px;
 }
+
+.g-map{
+  height: 600px;
+  width: 600px;
+}
