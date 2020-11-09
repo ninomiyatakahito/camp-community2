@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'orders/index'
   resources :orders
+  resources :orders
   devise_for :users
   get 'events/index'
   root to: "events#index"
