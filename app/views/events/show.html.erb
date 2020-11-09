@@ -30,6 +30,11 @@ event#show
           <p class="detail__title">キャッチコピー</p>
           <p class="detail__message">
             <%= @event.period %>
+
+            <p class="detail__title">イベントタグ</p>
+            <% @event.tags.each do |tag| %>
+            <%= tag.name %>
+            <% end %>
           </p>
         </div>
       </div>
@@ -37,3 +42,4 @@ event#show
     </div>
   </div>
 </main>
+
