@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
 
   private
 
-  def purchase_params
-    params.require(:purchase_address).permit(:post_code, :prefecture_id, :city, :street, :building_name, :phone_number, :order).merge(user_id: current_user.id, item_id: params[:item_id])
+  def event_params
+    params.require(:event_address).permit(:post_code, :prefecture_id, :city, :street, :building_name, :phone_number, :order).merge(user_id: current_user.id, item_id: params[:item_id])
   end
 end
