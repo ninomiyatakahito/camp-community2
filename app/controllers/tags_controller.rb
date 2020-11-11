@@ -4,7 +4,6 @@ class TagsController < ApplicationController
       @tagss = Tag.find(20)
       @tagsss = Tag.find(21)
       @tagssss = Tag.find(22)
-
   end
 
   def show

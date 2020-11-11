@@ -7,22 +7,28 @@
     <div class="header-title">
     <h1></h1>
     </div>
-    <div class="header-info">
+</header>
+
+  <div class="header-info">
       <ul class='lists-right'>
-      <% if user_signed_in? %>
-        <li><%= link_to "こんにちは#{current_user.nickname}さん", root_path, class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
-        <li><%= link_to '投稿する', new_event_path, class: "sign-up" %></li>
-         <li><%= link_to '地図から探す', root_path, class: "sign-up" %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>
+        <% if user_signed_in? %>
+       <div class="user-desc">
+        <div class="user-name">
+          <li><%= link_to "こんにちは#{current_user.nickname}さん", root_path, class: "user-nickname" %></li>
+        </div>
+        <div class="header-menus">
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+          <li><%= link_to '投稿する', new_event_path, class: "sign-up" %></li>
+          <li><%= link_to '地図から探す', root_path, class: "sign-up" %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <% end %>
+        </div>
+      </div>
       </ul>
     </div>
   </div>
-</header>
-
 
 <div class="g-map">
 <div id="target"></div>
@@ -112,6 +118,8 @@ function codeAddress(){
       </div>
   </div>
 </div>
+
+
 
 <div class="genre-item">
   <div class="past-log">
