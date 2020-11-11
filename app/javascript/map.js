@@ -1,4 +1,3 @@
-
 function initMap() {
   console.log("OK");
 
