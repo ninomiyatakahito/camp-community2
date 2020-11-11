@@ -70,3 +70,9 @@ header{
   display: flex;
   flex-direction: column-reverse;
 }
+
+
+
+.hidden{
+  display: none;
+}
