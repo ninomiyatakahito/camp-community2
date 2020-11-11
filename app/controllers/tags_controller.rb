@@ -8,9 +8,9 @@ class TagsController < ApplicationController
   end
 
   def show
-    @tags = Tag.find(params[:id])
+    @tag = Tag.find(params[:id])
     @event = Event.new
-    @events = @tags.events
+    @events = @tag.events
   end
 
   private
