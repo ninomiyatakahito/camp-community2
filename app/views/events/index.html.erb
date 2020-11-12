@@ -8,7 +8,7 @@
     <h1></h1>
     </div>
 </header>
-
+<div class="all-ground">
   <div class="header-info">
       <ul class='lists-right'>
         <% if user_signed_in? %>
@@ -128,6 +128,7 @@ function codeAddress(){
 
 
 
+
   <div class="event-lists">
     <h1>イベント一覧 </h1>
     <div class="event-title"> 
@@ -176,4 +177,4 @@ function codeAddress(){
     <%= render partial: "event", collection: @events %>
   </div>
 </main>
-
+</div>

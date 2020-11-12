@@ -1,4 +1,5 @@
 event#show
+<div class="all-ground">
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
@@ -37,9 +38,14 @@ event#show
             <% end %>
           </p>
         </div>
+        <div class="map-mini">
+           <p class="detail__title">場所の詳細</p>
+            <%= render partial: "map" %>
+        </div>
       </div>
 
     </div>
   </div>
 </main>
+</div>
 
