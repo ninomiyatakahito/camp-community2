@@ -1,19 +1,11 @@
-event#show
+<div class="all-ground">
 <main class="main">
   <div class="inner">
     <div class="prototype__wrapper">
       <p class="prototype__hedding">
         <%= @event.concept %>
       </p> 
-      <% if user_signed_in? && current_user.id == @event.user_id %>
-      <%= link_to @event.user.nickname , root_path, class: :prototype__user %>
-        <div class="prototype__manage">
-          <%= link_to "編集する",  edit_event_path, class: :prototype__btn %>
-          <%= link_to "削除する",  event_path, method: :delete, class: :prototype__btn %>
-        </div>
-        <% elsif  %>
-        <%= link_to 'イベント参加ページに進む', event_orders_path(@event.id) ,class: :prototype__btn %>
-      <% end %>
+      
       <div class="prototype__image">
         <%= image_tag @event.image %>
       </div>
@@ -37,9 +29,22 @@ event#show
             <% end %>
           </p>
         </div>
+        <div class="map-mini">
+           <p class="detail__title">場所の詳細</p>
+            <%= render partial: "map" %>
+        </div>
       </div>
-
+        <% if user_signed_in? && current_user.id == @event.user_id %>
+          <%= link_to @event.user.nickname , root_path, class: :prototype__user %>
+        <div class="prototype__manage">
+          <%= link_to "編集する",  edit_event_path, class: :prototype__btn %>
+          <%= link_to "削除する",  event_path, method: :delete, class: :prototype__btn %>
+        </div>
+        <% elsif  %>
+          <%= link_to 'イベント参加ページに進む', event_orders_path(@event.id) ,class: :prototype__btn %>
+        <% end %>
     </div>
   </div>
 </main>
+</div>
 
